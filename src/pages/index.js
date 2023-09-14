@@ -4,11 +4,12 @@ import Banner from "../Components/Banner";
 import ProductFeed from "../Components/ProductFeed";
 
 
-export default function Home() {
+export default function Home({ products }) {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title>Amazon 2.0</title>
+        <title>Online Shopping site in India: Shop Online</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
       
       <Header />
@@ -18,8 +19,20 @@ export default function Home() {
         <Banner />
 
         {/* Product Feed */}
-        <ProductFeed />
+        <ProductFeed products={products} />
       </main>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const products = await fetch("https://fakestoreapi.com/products").then(
+    (res) => res.json()
+  );
+
+  return {
+    props: {
+      products,
+    },
+  };
 }

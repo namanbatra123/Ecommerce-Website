@@ -40,7 +40,7 @@ function Header() {
 
 
       {/* Bottom nav */}
-      <div className="flex items-center p-2 bg-amazon_blue-light text-white text-sm justify-between font-medium ">
+      <div className="flex items-center p-2 bg-amazon_blue-light text-white text-sm justify-between font-medium px-5">
         <p className="link flex items-center">
           <MenuIcon className="h-6 mr-1"/>
           All

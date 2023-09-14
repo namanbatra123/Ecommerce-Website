@@ -1,5 +1,5 @@
 import Product from "./Product"
-import Image from "next/Image"
+import Image from "next/image"
 import ad from "../styles/Images/ad.jpg"
 
 function ProductFeed({ products }) {

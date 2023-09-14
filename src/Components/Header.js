@@ -1,4 +1,4 @@
-import Image from "next/Image"
+import Image from "next/image"
 import Logo from "../styles/Images/amazon-logo.svg"
 import { SearchIcon, MenuIcon, ShoppingCartIcon } from "@heroicons/react/outline"
 

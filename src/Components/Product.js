@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { StarIcon } from '@heroicons/react/solid';
 import Currency from 'react-currency-formatter';
-import Image from "next/Image"
+import Image from "next/image"
 import PrimeLogo from "../styles/Images/prime-logo.svg";
 
 function Product({ id, title, price, description, category, image }) {

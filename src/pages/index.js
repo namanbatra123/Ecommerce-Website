@@ -24,15 +24,29 @@ export default function Home({ products }) {
     </div>
   );
 }
-
 export async function getServerSideProps(context) {
-  const products = await fetch("https://fakestoreapi.com/products").then(
-    (res) => res.json()
-  );
+  try {
+    const response = await fetch("https://fakestoreapi.com/products");
 
-  return {
-    props: {
-      products,
-    },
-  };
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const products = await response.json();
+
+    return {
+      props: {
+        products,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+
+    return {
+      props: {
+        products: [], // Return an empty array or handle the error as needed
+      },
+    };
+  }
 }
+

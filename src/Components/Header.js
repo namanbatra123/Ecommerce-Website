@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Logo from "../styles/Images/amazon-logo.svg"
-import { SearchIcon, MenuIcon, ShoppingCartIcon } from "@heroicons/react/outline"
+import { Search, MenuIcon, ShoppingCart } from "../Icons"
 
 function Header() {
   return (
@@ -15,7 +15,7 @@ function Header() {
         {/* SearchBar */}
         <div className="hidden sm:flex items-center h-10 rounded-md flex-grow cursor-pointer bg-yellow-400 hover:bg-yellow-500 w-full">
           <input type="text" className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4" />
-          <SearchIcon className="h-12 p-4" />
+          <Search className="h-12 p-4" />
         </div>
 
         {/* Right */}
@@ -32,7 +32,7 @@ function Header() {
 
           <div className="flex items-center link relative">
             <span className="absolute top-[-1px] right-0 md:right-5 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">12</span>
-            <ShoppingCartIcon className="h-10" />
+            <ShoppingCart className="h-10" />
             <p className="hidden md:inline font-extrabold md:text-sm mt-3">Cart</p>
           </div>
         </div>

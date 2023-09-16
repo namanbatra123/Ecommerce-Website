@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StarIcon } from '@heroicons/react/solid';
+import { StarIcon } from "../Icons";
 import Currency from 'react-currency-formatter';
 import Image from "next/image"
 import PrimeLogo from "../styles/Images/prime-logo.svg";

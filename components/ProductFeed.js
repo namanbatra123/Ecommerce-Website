@@ -1,5 +1,6 @@
 import React from "react";
-
+import Image from "next/image";
+import gifBanner from "../public/banner.gif"
 import Product from "./Product";
 
 const ProductFeed = ({ products }) => {
@@ -72,9 +73,9 @@ const ProductFeed = ({ products }) => {
             />
           ))}
       </div>
-      <img
+      <Image
         className="md:col-span-full object-contain"
-        src="https://drive.google.com/uc?export=download&id=1gJ-8BH4PyaHWLJZ-t2DHU2q7U2BRMYqh"
+        src= {gifBanner}
         alt=""
       />
       {products

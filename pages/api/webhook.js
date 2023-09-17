@@ -19,7 +19,7 @@ const fullFillOrder = async (session) => {
       timeStamp: admin.firestore.FieldValue.serverTimestamp(),
     })
     .then(() => {
-      console.log(`suess: oreder ${session.id} had been added to the DB`);
+      console.log(`Success: Order ${session.id} had been added to the DB`);
     })
     .catch((err) => console.log("Erreur a l'insertion !", err.message));
 };
